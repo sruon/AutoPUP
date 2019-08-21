@@ -106,10 +106,6 @@ windower.register_event('incoming chunk', function(id,original,modified,injected
     elseif id == 0x029 then
         local packet = packets.parse('incoming', original)
         --table.vprint(packet)
-        if (packet.Message) == 206 and packet['Actor'] == windower.ffxi.get_mob_by_target('me').id then
-            local buff = ids.buffs[packet['Param 1']]
-            local targ = windower.ffxi.get_mob_by_id(packet['Target']).name
-        end
     end
 end)
 
