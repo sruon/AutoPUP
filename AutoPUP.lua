@@ -15,6 +15,7 @@ get = require('pup_get')
 cast = require('pup_cast')
 
 default = {
+	delay=1,
     active=true,
     maneuvers={wind=1,light=1,fire=1},
     box={text={size=10}}
