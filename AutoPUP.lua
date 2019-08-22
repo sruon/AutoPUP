@@ -93,11 +93,6 @@ windower.register_event('incoming chunk', function(id,original,modified,injected
             -- Finish Casting
             casting = false
             del = settings.delay
-            local spell = ids.spells[packet['Param']]
-            if ids.maneuvers[packet['Param']] then
-                local buffs = get.buffs(windower.ffxi.get_player().buffs)
-                local spell_name = ids.maneuvers[packet['Param']]
-            end
         elseif L{3,5}:contains(packet['Category']) then
             casting = false
         elseif L{7,9}:contains(packet['Category']) then
